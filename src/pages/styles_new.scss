@@ -1,0 +1,171 @@
+body, html{
+  width: 100%;
+  height: 100%;
+  padding:0;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+p{
+  margin: 0;
+}
+#___gatsby,
+#gatsby-focus-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+ul, li{
+  padding:0;
+  margin: 0;
+  list-style: none;
+}
+
+.logo-tv{
+  background: url('../../static/logo_video.png') 0 0 no-repeat;
+  width: 95px;
+  height: 90px;
+  position:absolute;
+  top: 43px;
+  left: 27px;
+  z-index: 10;
+}
+
+
+.content{
+  margin: 0 auto;
+  max-width: 896px;
+}
+
+.about{
+  background-color: #ED1C24;
+  padding: 180px 0;
+}
+
+.logo{
+  background: url('../../static/logo.png') 0 0 no-repeat;
+  width: 377px;
+  height: 93px;
+  margin: 0 auto;
+}
+
+.all-of-the-above{
+  background: url('../../static/all_of_the_above.png') 0 0 no-repeat;
+  width: 769px;
+  height: 75px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+.about{
+  color:white;
+  .content{
+    padding-top: 90px;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    p{
+      max-width: 50%;
+      padding: 0 10px;
+    }
+  }
+}
+
+.mother-nature{
+  position:relative;
+  color:black;
+  line-height: 36px;
+  font-size:24px;
+  padding: 100px 0 200px;
+  .content{
+    z-index: 10;
+    position:relative;
+  }
+  .big-text{
+    line-height: 109px;
+    font-size:64px;
+    font-weight: bold;
+  }
+  .small-text{
+    padding-top: 100px;
+    max-width: 477px;
+  }
+  .earth{
+    position: absolute;
+    right: 10%;
+    bottom: 2%;
+    width: 447px;
+    height: 601px;
+    background: url('../../static/earth.png') 0 0 no-repeat;
+    z-index: 1;
+  }
+  .badge{
+    width: 162px;
+    height: 162px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 10; 
+    top: 30%;
+    right: 4%;
+    div{
+      padding: 0 20px;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+}
+
+.why{
+  background-color: black;
+  padding: 100px 0;
+  color:white;
+  font-size: 24px;
+  .picture{
+    width: 345px;
+    height: 418px;
+    &.sophie{
+      background: url('../../static/who_sophie.png') 0 0 no-repeat;
+    }
+    &.celine{
+      background: url('../../static/who_celine.png') 0 0 no-repeat;
+    }
+  }
+  article{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+    .info{
+      padding-left: 90px;
+    }
+    .title{
+      font-weight: bold;
+      font-size: 36px;
+      padding-bottom: 20px;
+    }
+    .description{
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+.newsletter-signup{
+  background-color: #ED1C24;
+  padding: 100px 0;
+  font-size: 26px;
+  color: white;
+  input[type=email],
+  input[type=submit]{
+    border: 0;
+    font-size: 26px;
+    border-radius: 4px;
+  }
+  input[type=email]{
+  }
+  input[type=submit]{
+  }
+}
