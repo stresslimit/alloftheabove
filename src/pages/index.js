@@ -1,12 +1,12 @@
 import React from "react"
 import Tv from '../components/tv';
-import './styles.scss';
 import src_sophie from '../../static/who_sophie.png';
 import src_celine from '../../static/who_celine.png';
 import src_logo from '../../static/logo.png';
 import src_allOfTheAbove from '../../static/all_of_the_above.png';
-const list_id = 'MUIEAExWpwqxf_uw0T3adGQF4dZAYYXQCh7OWlToSlL_tOerr9Uq-e_jaO-oP5EToicb4EghZfqf_3FwJCA8qearFySrjxdjDxHuCPStvEQH6SkDI7hVC2gdBSDA7uA3dwUaEYUUthY8kb_1FAN8U_ACf6v1GxfKg0dEqcHs9zi1cWORJnDLGFDNcxA50xX2xsI_QvDzCoCPw0-d';
+import './home.scss';
 
+const list_id = 'MUIEAExWpwqxf_uw0T3adGQF4dZAYYXQCh7OWlToSlL_tOerr9Uq-e_jaO-oP5EToicb4EghZfqf_3FwJCA8qearFySrjxdjDxHuCPStvEQH6SkDI7hVC2gdBSDA7uA3dwUaEYUUthY8kb_1FAN8U_ACf6v1GxfKg0dEqcHs9zi1cWORJnDLGFDNcxA50xX2xsI_QvDzCoCPw0-d';
 
 const Home = () => {
   return (
@@ -40,7 +40,7 @@ const Home = () => {
             <p>She actually chose all of us. And we are here to show you why.</p>
             <article>
               <div className="picture">
-                <img src={src_sophie} alt="Sophia Li picture" />
+                <img src={src_sophie} alt="Sophia Li" />
               </div>
               <div className="info">
                 <h3>Sophia Li</h3>
@@ -49,7 +49,7 @@ const Home = () => {
             </article>
             <article>
               <div className="picture">
-                <img src={src_celine} alt="Celine Semaan picture" />
+                <img src={src_celine} alt="Celine Semaan" />
               </div>
               <div className="info">
                 <h3>Céline Semaan</h3>

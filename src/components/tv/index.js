@@ -14,9 +14,10 @@ const Tv = () => {
   const [secondSelectedVideo, setSecondSelectedVideo] = useState(videos[1]);
   const [toggleVideo, setToggleVideo] = useState(true);
   const [isTransition, setIsTransition] = useState(false);
+  const videoMainUrl = 'https://www.youtube-nocookie.com/embed/';
+  const videoParams = '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&autoplay=1';
 
   const onClickButton = (index) => {
-   
     // Add transition
     setIsTransition(true);
 
@@ -43,14 +44,14 @@ const Tv = () => {
       <iframe
         className={`${toggleVideo ? 'active' : ''}`}
         title="iframe-first-video"
-        src={`https://www.youtube-nocookie.com/embed/${firstSelectedVideo}?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1`}
+        src={`${videoMainUrl}${firstSelectedVideo}${videoParams}`}
         frameborder="0"
         allowfullscreen
       ></iframe>
       <iframe
         className={`${!toggleVideo ? 'active' : ''}`}
         title="iframe-second-video"
-        src={`https://www.youtube-nocookie.com/embed/${secondSelectedVideo}?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1`}
+        src={`${videoMainUrl}${secondSelectedVideo}${videoParams}`}
         frameborder="0"
         allowfullscreen
       ></iframe>
