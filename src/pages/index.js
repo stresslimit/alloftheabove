@@ -23,13 +23,13 @@ const Home = () => {
           </div>
           <div className="content">
             <p>A thought provoking show with a sense of humor answering today’s most pressing questions around climate change and social justice.</p>
-            <p>This show goes beyond news, it is a deep dive into topics providing a new way of thinking and thus living in harmony with mother nature</p>
+            <p>Every episode plants 1,000 trees with Ecosia, divest from fossil fuel and invests in sustainability literacy with Slow Factory.</p>
           </div>
         </section>
         <section className="mother-nature">
           <div className="earth"></div>
           <div className="content">
-            <h2>This show is giving Mother Nature center stage to understand all the solutions that already exist out there</h2>
+            <h2>This show is giving Mother Nature center stage to understand all the solutions that already exist.</h2>
             <p className="small-text">This isn’t a doomsday anxiety inducing show about how we are all going to die if the climate collapses, this is a show about the million solutions that exist and we want to address  all of the above  when addressing climate justice.</p>
           </div>
           <div className="badge"><div>Every view fights the climate crisis</div></div>
@@ -44,6 +44,7 @@ const Home = () => {
               </div>
               <div className="info">
                 <h3>Sophia Li</h3>
+                <p><small>She has the power to move people into action.</small></p>
                 <p>Sophia is a Chinese-American journalist, advocate and director, she has reported and built a body of work centered around environmental justice and racial justice in America and around the world. Her work has been shared millions of times by world leaders and celebrities globally</p>
               </div>
             </article>
@@ -53,6 +54,7 @@ const Home = () => {
               </div>
               <div className="info">
                 <h3>Céline Semaan</h3>
+                <p><small>She has the power to lead government to change.</small></p>
                 <p>Celine is a refugee, first generation war survivor, her career continues to be shaped by the intersection of social and environmental justice where she invests her time in building Slow Factory, an institute and research lab investing in education & climate positive solutions that are ready to be implemented today</p>
               </div>
             </article>
@@ -63,9 +65,11 @@ const Home = () => {
             <form method="post" className="newsletter-signup-form" target="_blank" action={`https://cf3ef3ac.sibforms.com/serve/${list_id}`}>
               <input type="hidden" name="locale" value="en" />
               <input type="hidden" name="html_type" value="simple" />
-              <label className="title-sm" for="EMAIL" htmlFor="email">Your Email:</label> &nbsp;
-              <input className="title-sm" type="email" id="email" name="EMAIL" required="true"  /> &nbsp;
-              <input className="button" type="submit" value="Sign Up" name="subscribe" />
+              <label className="title-sm" for="EMAIL" htmlFor="email"><h2>Join the movement</h2></label>
+              <input className="title-sm" type="email" id="email" name="EMAIL" required="true" placeholder="Enter your email"  />
+              <div>
+                <input className="button" type="submit" value="Fight climate change" name="subscribe" />
+              </div>
             </form>
           </div>
         </section>

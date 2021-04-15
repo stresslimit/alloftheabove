@@ -12,6 +12,8 @@ const videos = [
   'yC9wZTJmDqA',
   '0SdenMzFgBg',
   'WxXy9lsiUPM',
+  'J6J9EfOdPgg',
+  'UpIMFker8Mg',
 ]
 
 const Tv = () => {
