@@ -38,8 +38,8 @@ ul, li{
   width: 95px;
   height: 90px;
   position:absolute;
-  top: 43px;
-  left: 27px;
+  top: 73px;
+  left: 31px;
   z-index: 10;
 }
 
@@ -136,7 +136,7 @@ ul, li{
     .earth{
       position: absolute;
       right: 10%;
-      bottom: 2%;
+      bottom: 0;
       width: 447px;
       height: 601px;
       background: url('../../static/earth.png') 0 0 no-repeat;
@@ -186,6 +186,12 @@ ul, li{
     }
     .info{
       padding-top: 2rem;
+      p{
+        padding-bottom: 1rem;
+        small{
+          font-weight: bold;
+        }
+      }
     }
   }
 }
@@ -205,7 +211,7 @@ ul, li{
       }
       h3{
         font-size: 2rem;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
       }
       .info{
         padding-top: 0;
@@ -230,18 +236,22 @@ ul, li{
     border-radius: 4px;
     border:0;
     background-color:white;
+    width: 300px;
+    box-sizing: border-box;
   }
   input[type=email]{
     height: 50px;
+    padding: 0 1rem;
   }
   input[type=submit]{
-    font-size: 1rem;
-    width: 100px;
+    font-size: 1.25rem;
     height: 50px;
     cursor: pointer;
+    padding: 0 1rem;
+    background-color: black;
+    color: white;
   }
 }
-
 
 @media (min-width: 700px) and (orientation: landscape) { 
   input[type=email],
