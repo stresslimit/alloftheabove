@@ -4,6 +4,7 @@ import src_sophie from '../../static/who_sophie.png';
 import src_celine from '../../static/who_celine.png';
 import src_logo from '../../static/logo.png';
 import src_allOfTheAbove from '../../static/all_of_the_above.png';
+import src_ever from '../../static/ever-ever-logo.svg';
 import './home.scss';
 
 const list_id = 'MUIEAExWpwqxf_uw0T3adGQF4dZAYYXQCh7OWlToSlL_tOerr9Uq-e_jaO-oP5EToicb4EghZfqf_3FwJCA8qearFySrjxdjDxHuCPStvEQH6SkDI7hVC2gdBSDA7uA3dwUaEYUUthY8kb_1FAN8U_ACf6v1GxfKg0dEqcHs9zi1cWORJnDLGFDNcxA50xX2xsI_QvDzCoCPw0-d';
@@ -63,6 +64,8 @@ const Home = () => {
           </div>
         </section>
         <section className="newsletter-signup">
+          <p>First two episodes powered by</p>
+          <img src={src_ever} alt="All of the above" />
           <div className="content">
             <form method="post" className="newsletter-signup-form" target="_blank" action={`https://cf3ef3ac.sibforms.com/serve/${list_id}`}>
               <input type="hidden" name="locale" value="en" />
