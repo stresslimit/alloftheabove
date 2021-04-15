@@ -2,20 +2,25 @@ import React, { useState } from "react"
 import './tv.scss';
 
 const videos = [
-  'eFzOS8JPeC4',
-  'JBH-VB4YdL8',
-  '2vkhQi9yDog',
-  'stbwg37THQ8',
-  'YWftVixpbuI'
+  'rvpkRXp6qbc',
+  'tN8RE02iNII',
+  'GvBX2WsXEo0',
+  'TPkXAi_IKwQ',
+  'thYg0GP8qsM',
+  '_dWJVHIE9S8',
+  'ylkWpE89nn8',
+  'yC9wZTJmDqA',
+  '0SdenMzFgBg',
+  'WxXy9lsiUPM',
 ]
 
 const Tv = () => {
   const [firstSelectedVideo, setFirstSelectedVideo] = useState(videos[0]);
-  const [secondSelectedVideo, setSecondSelectedVideo] = useState(videos[1]);
+  const [secondSelectedVideo, setSecondSelectedVideo] = useState();
   const [toggleVideo, setToggleVideo] = useState(true);
   const [isTransition, setIsTransition] = useState(false);
   const videoMainUrl = 'https://www.youtube-nocookie.com/embed/';
-  const videoParams = '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&autoplay=1';
+  const videoParams = '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&cc_load_policy=1';
 
   const onClickButton = (index) => {
     // Add transition
@@ -47,6 +52,7 @@ const Tv = () => {
         src={`${videoMainUrl}${firstSelectedVideo}${videoParams}`}
         frameborder="0"
         allowfullscreen
+        allow="autoplay"
       ></iframe>
       <iframe
         className={`${!toggleVideo ? 'active' : ''}`}
@@ -54,6 +60,7 @@ const Tv = () => {
         src={`${videoMainUrl}${secondSelectedVideo}${videoParams}`}
         frameborder="0"
         allowfullscreen
+        allow="autoplay"
       ></iframe>
       <div 
         className={`transition ${isTransition ? 'active' : ''}`}
