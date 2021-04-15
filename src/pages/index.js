@@ -46,6 +46,7 @@ const Home = () => {
                 <h3>Sophia Li</h3>
                 <p><small>She has the power to move people into action.</small></p>
                 <p>Sophia is a Chinese-American journalist, advocate and director, she has reported and built a body of work centered around environmental justice and racial justice in America and around the world. Her work has been shared millions of times by world leaders and celebrities globally</p>
+                <p><a href="https://www.instagram.com/sophfei/" target="_blank">@sophfei</a></p>
               </div>
             </article>
             <article>
@@ -56,6 +57,7 @@ const Home = () => {
                 <h3>Céline Semaan</h3>
                 <p><small>She has the power to lead government to change.</small></p>
                 <p>Celine is a refugee, first generation war survivor, her career continues to be shaped by the intersection of social and environmental justice where she invests her time in building Slow Factory, an institute and research lab investing in education & climate positive solutions that are ready to be implemented today</p>
+                <p><a href="https://www.instagram.com/celinecelines/" target="_blank">@celinecelines</a></p>
               </div>
             </article>
           </div>
