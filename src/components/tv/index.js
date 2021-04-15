@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import './tv.scss';
 
 const videos = [
@@ -17,7 +17,7 @@ const videos = [
 ]
 
 const Tv = () => {
-  const [firstSelectedVideo, setFirstSelectedVideo] = useState(videos[0]);
+  const [firstSelectedVideo, setFirstSelectedVideo] = useState();
   const [secondSelectedVideo, setSecondSelectedVideo] = useState();
   const [toggleVideo, setToggleVideo] = useState(true);
   const [isTransition, setIsTransition] = useState(false);
@@ -45,6 +45,15 @@ const Tv = () => {
       setIsTransition(false);
     }, 1500);
   }
+
+  useEffect(() => {
+    setIsTransition(true);
+    setTimeout(() => {
+      setFirstSelectedVideo(videos[0]);
+      setIsTransition(false);
+      setToggleVideo(true);
+    }, 1500);
+  }, []);
 
   return (
     <div id="tv">

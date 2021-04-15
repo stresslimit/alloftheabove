@@ -1,7 +1,7 @@
 #tv{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 350px;
     top: 0;
     left: 0;
     bottom: 0;
@@ -19,11 +19,7 @@
     }
   }
   .controller{
-    position: absolute;
-    top: 180px;
-    left: 27px;
-    width: 120px;
-    border-radius: 8px;
+    background: black;
     li{
       display: inline;
     }
@@ -35,25 +31,56 @@
       width: 45px;
       height: 45px;
       margin: 3px;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: bold;
       border: 0;
       border-radius: 2px;
+      &:active,
+      &:focus{
+        border:0;
+      }
     }
   }
+
   .transition{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 248px;
     background:orange;
     background-image: url('../../../static/tenor.gif');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     opacity: 0;
     transition: opacity .5s;
+    display: none;
+    top: 0;
+    left: 0;
     &.active{
       opacity: 1;
+      display: block;
+    }
+  }
+
+  @media (min-width: 700px) and (orientation: landscape) { 
+    .controller{
+      position: absolute;
+      top: 180px;
+      left: 27px;
+      width: 120px;
+      background-color:transparent;
+
+      button{
+        font-size: 30px;
+      }
+    }
+    .transition{
+      height: 100%;
     }
   }
 }
 
+@media (min-width: 700px) and (orientation: landscape) { 
+  #tv{
+    height: 100%;
+  }
+}

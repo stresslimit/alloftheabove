@@ -33,14 +33,16 @@ ul, li{
   list-style: none;
 }
 
-.logo-tv{
-  background: url('../../static/logo_video.png') 0 0 no-repeat;
-  width: 95px;
-  height: 90px;
-  position:absolute;
-  top: 73px;
-  left: 31px;
-  z-index: 10;
+@media (min-width: 700px) and (orientation: landscape) { 
+  .logo-tv{
+    background: url('../../static/logo_video.png') 0 0 no-repeat;
+    width: 95px;
+    height: 90px;
+    position:absolute;
+    top: 73px;
+    left: 31px;
+    z-index: 10;
+  }
 }
 
 .content{
