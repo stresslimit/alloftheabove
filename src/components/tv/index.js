@@ -2,23 +2,79 @@ import React, { useState, useEffect } from "react"
 import './tv.scss';
 
 const videos = [
-  'rvpkRXp6qbc',
-  'tN8RE02iNII',
-  'GvBX2WsXEo0',
-  'TPkXAi_IKwQ',
-  'thYg0GP8qsM',
-  '_dWJVHIE9S8',
-  'ylkWpE89nn8',
-  'yC9wZTJmDqA',
-  '0SdenMzFgBg',
-  'WxXy9lsiUPM',
-  'J6J9EfOdPgg',
-  'UpIMFker8Mg',
+  {
+    id: 'rvpkRXp6qbc',
+    start: ''
+  },
+  {
+    id: 'tN8RE02iNII',
+    start: ''
+  },
+  {
+    id: 'GvBX2WsXEo0',
+    start: ''
+  },
+  {
+    id: 'TPkXAi_IKwQ',
+    start: ''
+  },
+  {
+    id: 'thYg0GP8qsM',
+    start: ''
+  },
+  {
+    id: '_dWJVHIE9S8',
+    start: ''
+  },
+  {
+    id: 'ylkWpE89nn8',
+    start: ''
+  },
+  {
+    id: 'yC9wZTJmDqA',
+    start: ''
+  },
+  {
+    id: '0SdenMzFgBg',
+    start: ''
+  },
+  {
+    id: 'WxXy9lsiUPM',
+    start: ''
+  },
+  {
+    id: 'J6J9EfOdPgg',
+    start: ''
+  },
+  {
+    id: 'UpIMFker8Mg',
+    start: ''
+  },
+  {
+    id: '2m8YACFJlMg',
+    start: ''
+  },
+  {
+    id: 'w2-e8eERg_c',
+    start: ''
+  },
+  {
+    id: 't513R-oEn0g',
+    start: '275'
+  },
+  {
+    id: 'mC84VMYUzoI',
+    start: ''
+  },
+  {
+    id: 'P4q4rspgtD4',
+    start: ''
+  },
 ]
 
 const Tv = () => {
-  const [firstSelectedVideo, setFirstSelectedVideo] = useState();
-  const [secondSelectedVideo, setSecondSelectedVideo] = useState();
+  const [firstVideoIndex, setFirstVideoIndex] = useState();
+  const [secondVideoIndex, setSecondVideoIndex] = useState();
   const [toggleVideo, setToggleVideo] = useState(true);
   const [isTransition, setIsTransition] = useState(false);
   const videoMainUrl = 'https://www.youtube-nocookie.com/embed/';
@@ -31,11 +87,11 @@ const Tv = () => {
     // Start new video
     setTimeout(() => {
       if (toggleVideo) {
-        setSecondSelectedVideo(videos[index]);
-        setFirstSelectedVideo();
+        setSecondVideoIndex(index);
+        setFirstVideoIndex();
       } else {
-        setFirstSelectedVideo(videos[index]);
-        setSecondSelectedVideo();
+        setFirstVideoIndex(index);
+        setSecondVideoIndex();
       }
       setToggleVideo(!toggleVideo);
     }, 500);
@@ -49,36 +105,41 @@ const Tv = () => {
   useEffect(() => {
     setIsTransition(true);
     setTimeout(() => {
-      setFirstSelectedVideo(videos[0]);
+      setFirstVideoIndex(0);
       setIsTransition(false);
       setToggleVideo(true);
     }, 1500);
   }, []);
+
+  const firstVideoId = firstVideoIndex !== undefined ? videos[firstVideoIndex].id : '';
+  const firstVideoStart = firstVideoIndex !== undefined ? videos[firstVideoIndex].start : '';
+  const secondVideoId = secondVideoIndex !== undefined ? videos[secondVideoIndex].id : '';
+  const secondVideoStart = secondVideoIndex !== undefined ? videos[secondVideoIndex].start : '';
 
   return (
     <div id="tv">
       <iframe
         className={`${toggleVideo ? 'active' : ''}`}
         title="iframe-first-video"
-        src={`${videoMainUrl}${firstSelectedVideo}${videoParams}`}
+        src={`${videoMainUrl}${firstVideoId}${videoParams}&start=${firstVideoStart}`}
         frameborder="0"
         allowfullscreen
-        allow="autoplay"
+        // allow="autoplay"
       ></iframe>
       <iframe
         className={`${!toggleVideo ? 'active' : ''}`}
         title="iframe-second-video"
-        src={`${videoMainUrl}${secondSelectedVideo}${videoParams}`}
+        src={`${videoMainUrl}${secondVideoId}${videoParams}&start=${secondVideoStart}`}
         frameborder="0"
         allowfullscreen
-        allow="autoplay"
+        // allow="autoplay"
       ></iframe>
       <div 
         className={`transition ${isTransition ? 'active' : ''}`}
       ></div>
       <div className="controller">
         <ul>
-          {videos.map((video, index) => <li><button onClick={() => onClickButton(index)}>{index + 1}</button></li>)}
+          {videos.map((video, index) => <li key={index}><button onClick={() => onClickButton(index)}>{index + 1}</button></li>)}
         </ul>
       </div>
     </div>
