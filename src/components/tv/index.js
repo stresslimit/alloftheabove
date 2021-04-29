@@ -1,76 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
+import videos from './data';
 import './tv.scss';
-
-const videos = [
-  {
-    id: 'rvpkRXp6qbc',
-    start: ''
-  },
-  {
-    id: 'tN8RE02iNII',
-    start: ''
-  },
-  {
-    id: 'GvBX2WsXEo0',
-    start: ''
-  },
-  {
-    id: 'TPkXAi_IKwQ',
-    start: ''
-  },
-  {
-    id: 'thYg0GP8qsM',
-    start: ''
-  },
-  {
-    id: '_dWJVHIE9S8',
-    start: ''
-  },
-  {
-    id: 'ylkWpE89nn8',
-    start: ''
-  },
-  {
-    id: 'yC9wZTJmDqA',
-    start: ''
-  },
-  {
-    id: '0SdenMzFgBg',
-    start: ''
-  },
-  {
-    id: 'WxXy9lsiUPM',
-    start: ''
-  },
-  {
-    id: 'J6J9EfOdPgg',
-    start: ''
-  },
-  {
-    id: 'UpIMFker8Mg',
-    start: ''
-  },
-  {
-    id: '2m8YACFJlMg',
-    start: ''
-  },
-  {
-    id: 'w2-e8eERg_c',
-    start: ''
-  },
-  {
-    id: 't513R-oEn0g',
-    start: '275'
-  },
-  {
-    id: 'mC84VMYUzoI',
-    start: ''
-  },
-  {
-    id: 'P4q4rspgtD4',
-    start: ''
-  },
-]
 
 const Tv = () => {
   const [firstVideoIndex, setFirstVideoIndex] = useState();
@@ -78,7 +8,8 @@ const Tv = () => {
   const [toggleVideo, setToggleVideo] = useState(true);
   const [isTransition, setIsTransition] = useState(false);
   const videoMainUrl = 'https://www.youtube-nocookie.com/embed/';
-  const videoParams = '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&cc_load_policy=1';
+  const videoParams = '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&cc_load_policy=1';
+  // const videoParams = '?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&autoplay=1&cc_load_policy=1';
 
   const onClickButton = (index) => {
     // Add transition
